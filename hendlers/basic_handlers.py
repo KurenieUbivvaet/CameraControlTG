@@ -30,7 +30,7 @@ async def cmd_help(message: types.Message):
         help_text = "Доступные команды:\n"
         for cmd, info in commands_info.items():
             help_text += f"/{cmd} - {info['brief']}\n"
-        help_text += "Используйте <b><u>/help &lt;command&gt;</u></b> для подробной информации по команде"
+        help_text += "\nИспользуйте <b><u>/help &lt;command&gt;</u></b> для подробной информации по команде"
         await message.answer(help_text)
 
 @router.message(Command('hide_link'))
